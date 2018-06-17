@@ -34,7 +34,7 @@ typedef struct
 
 
 extern u16 Angle;
-
+extern int Deviation_Angle;
 
 extern Inc_PID ChassisPID_1;
 extern Inc_PID ChassisPID_2;

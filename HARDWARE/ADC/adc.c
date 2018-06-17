@@ -4,6 +4,7 @@
 
 u16 Angle;
 
+
 void Adc_Init(void)
 {
 	GPIO_InitTypeDef  GPIO_InitStructure;
