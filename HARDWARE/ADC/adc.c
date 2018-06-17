@@ -83,7 +83,7 @@ u16 Get_Adc1_Average(u8 ch,u8 times)
 	for(t=0;t<times;t++)
 	{
 		temp_val+=Get_Adc1(ch);
-		delay_us(10);
+		delay_us(100);
 	}
 	return temp_val/times;
 }
