@@ -9,8 +9,8 @@
 void TIM3_PWM_Init(u16 arr,u16 psc);
 
 void Stepping_motor_init(void);
-void Clockwise_Rotate(u8 step_num);
-void Counterclockwise_Rotate(u8 step_num);
+void Clockwise_Rotate(int step_num);
+void Counterclockwise_Rotate(int step_num);
 
 
 

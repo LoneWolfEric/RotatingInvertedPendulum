@@ -7,7 +7,7 @@ void TIM14_Init(void)
 	
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM14,ENABLE);  ///使能TIM14时钟
 	
-	TIM_TimeBaseInitStructure.TIM_Period = 50000-1; 	//自动重装载值
+	TIM_TimeBaseInitStructure.TIM_Period = 100000-1; 	//自动重装载值
 	TIM_TimeBaseInitStructure.TIM_Prescaler=84-1;  //定时器分频
 	TIM_TimeBaseInitStructure.TIM_CounterMode=TIM_CounterMode_Up; //向上计数模式
 	TIM_TimeBaseInitStructure.TIM_ClockDivision=TIM_CKD_DIV1; 

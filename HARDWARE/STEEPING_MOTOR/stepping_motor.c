@@ -74,28 +74,32 @@ void Stepping_motor_init(void)
 }
 
 
-void Clockwise_Rotate(u8 step_num)
+void Clockwise_Rotate(int step_num)
 {
 	u32 delay_time = 0;
+	TIM_Cmd(TIM3, ENABLE); 
 	ENA = 0;
 	DIR = 1;
-	delay_us(10);
+	delay_us(20);
 	TIM_SetCompare2(TIM3,10);
-	delay_time = step_num * 8; 
+	delay_time = step_num * 20; 
 	delay_us(delay_time);
-	ENA = 1;
+	TIM_Cmd(TIM3, DISABLE);  	
+	//ENA = 1;
 }
 
-void Counterclockwise_Rotate(u8 step_num)
+void Counterclockwise_Rotate(int step_num)
 {
 	u32 delay_time = 0;
+	TIM_Cmd(TIM3, ENABLE); 
 	ENA = 0;
 	DIR = 0;
-	delay_us(10);
+	delay_us(20);
 	TIM_SetCompare2(TIM3,10);
-	delay_time = step_num *  8;
+	delay_time = step_num *  20;
 	delay_us(delay_time);
-	ENA = 1;
+	TIM_Cmd(TIM3, DISABLE);  	
+	//ENA = 1;
 }
 
 
